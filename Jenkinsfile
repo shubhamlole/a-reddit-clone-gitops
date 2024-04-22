@@ -11,7 +11,7 @@ pipeline{
         }
         stage("checkout scm"){
             steps{
-                git branch: 'main' , credentialsId: 'github' , url: 'https://github.com/shubhamlole1166/a-reddit-clone-gitops'
+                git branch: 'main' , credentialsId: 'github' , url: 'https://github.com/shubhamlole1166/a-reddit-clone-gitops.git'
             }
         }
         stage("Update Deployment file"){
