@@ -26,8 +26,8 @@ pipeline{
         stage('pushed changes to deployment repo'){
             steps{
                 sh """
-                    git config --global.user.name "shubhamlole"
-                    git config --global.user.email "loleshubham46@gmail.com"
+                    git config --global user.name "shubhamlole"
+                    git config --global user.email "loleshubham46@gmail.com"
                     git add deployment.yml
                     git commit -m "deployment.yml file updated" 
                    """
