@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: reddit-clone-deployment
 spec:
-  replica: 3
+  replicas: 2
   selector:
     matchLabels:
       app: reddit-clone-app
