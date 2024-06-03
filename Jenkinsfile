@@ -30,10 +30,10 @@ pipeline{
                     git config --global user.email "loleshubham46@gmail.com"
                     git add deployment.yml
                     git commit -m "deployment.yml file updated" 
-                   """
-                   withCredentials([usernamePassword(credentialsId:'github', gitToolName: 'Default')]){
-                   sh "git push https://github.com/shubhamlole/a-reddit-clone-gitops.git"
-                   }
+                """
+                    withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
+                    sh "git push https://github.com/shubhamlole/a-reddit-clone-gitops main"
+                }
             }
         }
     }
