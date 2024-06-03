@@ -31,7 +31,7 @@ pipeline{
                     git add deployment.yml
                     git commit -m "deployment.yml file updated" 
                    """
-                   withCredentials([gitusernamePassword:'github', gitToolName: 'Default']){
+                   withCredentials([usernamePassword(credentialsId:'github, gitToolName: 'Default')]){
                    sh "git push https://github.com/shubhamlole/a-reddit-clone-gitops.git"
                    }
             }
