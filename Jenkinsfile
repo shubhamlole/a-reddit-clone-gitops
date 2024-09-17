@@ -11,7 +11,7 @@ pipeline{
         }
         stage("cd repo clone"){
             steps{
-                git branch: 'main', credentialsId: 'github' url:'https://github.com/shubhamlole/a-reddit-clone-gitops.git'
+                git branch: 'main', credentialsId: 'github', url:'https://github.com/shubhamlole/a-reddit-clone-gitops.git'
             }
         }
     }
